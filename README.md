@@ -9,9 +9,9 @@ Methodology with graphical representation - Attack timeline and phase diagrams
 
 ### Attack Success Metrics:
 - target System: Windows 10 Home (Build 19045) - DESKTOP-OJHDIT4
-- Target IP 192.168.1.5
+- Target IP 192.
 - Attacker System Ubuntu Linux
-- Attacker IP 192.168.1.4
+- Attacker IP 192.
 - Connection Method PowerShell Reverse Shell via TCP port 4444
 - Attack Status  100% SUCCESS
 - Files Written 0 bytes (True fileless attack)
