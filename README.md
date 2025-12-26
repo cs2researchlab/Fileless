@@ -4,7 +4,7 @@ This research project successfully demonstrated real-world fileless malware atta
 
 Complete experiments - PowerShell reverse shell attack successfully executed 
 Experimental results in tables and graphs - 3 comprehensive tables with real data 
-System design diagram - Network topology and attack flow visualizations 
+System design diagram - attack flow visualizations 
 Methodology with graphical representation - Attack timeline and phase diagrams 
 
 ### Attack Success Metrics:
