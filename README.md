@@ -1,6 +1,6 @@
 ## EXECUTIVE SUMMARY
 
-This research project successfully demonstrated real-world fileless malware attacks in a controlled laboratory environment. All requirements from the professor have been met, including:
+This research project successfully demonstrated real-world fileless malware attacks in a controlled laboratory environment includes:
 
 Complete experiments - PowerShell reverse shell attack successfully executed 
 Experimental results in tables and graphs - 3 comprehensive tables with real data 
